@@ -31,3 +31,11 @@ nav ul li a:hover{
 .carousel-indicators .active{
     background: #ffa304;
 }
+
+.news_container{
+    margin-top: 35px;
+}
+.news_pic{
+    width: 229px;
+    height:31px;
+}
