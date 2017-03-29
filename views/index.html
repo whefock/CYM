@@ -12,7 +12,8 @@
 <body>
 <header>
     <div class="container">
-        <div id="logo" class="pull-left"><img src="../public/image/logo.png" alt="logo图片"></div>
+        <div id="logo" class="pull-left">
+            <a href=""><img src="../public/image/logo.png" alt="logo图片"></a></div>
         <nav class="pull-left">
             <ul>
                 <li><a href="javascript:void(0)">首页</a></li>
@@ -183,8 +184,8 @@
    <div class="wrap">
        <div class="about">
            <img src="../public/image/about-img.jpg" alt="about"/>
-           <a href="" class="read_more text-center">READ MORE</a>
        </div>
+       <a href="" class="read_more text-center">READ MORE</a>
    </div>
 </div>
 <!--公司介绍结束-->
@@ -196,6 +197,7 @@ var $tab_content=$(".service_tab_content"),
         $tab=$(".tabs"),
         $photo_container=$(".photo_show").find("div.col-md-12"),
         $photo_container_big=$(".photo_show").find("div.col-md-6"),
+        $about=$(".about"),
         $left=$(".left"),
         $right=$(".right");
     $tab.hover(function () {
@@ -206,7 +208,7 @@ var $tab_content=$(".service_tab_content"),
     //图片放大效果
 toScale($photo_container_big,true);
 toScale($photo_container);
-
+toScale($about);
 function toScale(obj,bol) {
     obj.hover(function () {
         $(this).find("img").css({

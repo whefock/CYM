@@ -91,9 +91,12 @@ nav ul li a:hover{
 .col-md-7 .row:hover h1,.col-md-7 .row:hover .date{
     color: #fff;
 }
+.col-md-7 .row:hover a{
+    color: #c6c6c6;
+    background: #fff;
+}
 .col-md-10{
     border-left: 1px solid gainsboro;
-
 }
 .col-md-10 h4{
     font-size: 2.5em;
@@ -148,7 +151,7 @@ nav ul li a:hover{
     display: inline-block!important;
 }
 .service_tab_content{
-    height: 300px;
+    height: 270px;
     display: none;
     margin-top: 50px;
 }
@@ -164,13 +167,6 @@ nav ul li a:hover{
     margin-top: 50px;
     padding-bottom: 80px;
 }
-.photo_show img{
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-}
-
 .photo_show .col-md-12,.photo_show .col-md-6{
     overflow: hidden;
 }
@@ -217,20 +213,25 @@ nav ul li a:hover{
      top:50%;
      -webkit-transform: translate(-50%,-72%);
      transform: translate(-50%,-72%);
-
+     overflow: hidden;
  }
+.photo_show img,.about img{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
 .read_more{
     width:120px;
     height:40px;
     display: block;
     position: absolute;
-    left: -20px;
-    bottom: -1px;
+    left: 60px;
+    bottom: 2px;
     background: #ffa304;
     color: #fff;
     line-height: 40px;
     font-size: 16px;
-
     -webkit-transition: 500ms;
     -moz-transition: 500ms;
     -o-transition: 500ms;
