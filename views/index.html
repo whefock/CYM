@@ -141,18 +141,34 @@
             <p>        公司的资源丰富，拥有自己的音乐文化中心，为各种公关活动打造优文化传播公司专注于做音乐文化交流、活动策划、派对活动。在音乐余的音乐活动群体中做音乐文化交流文化交流方面，组织优秀的专业音乐人才到专业或业余的音乐活动群体中做音乐文化交流。在活动策划中公司主要承接新品发布、企业年会、媒体发布会、庆典活动、会议活动、新闻发布会质的文艺活动（场地的布景到舞台的整个搭建编排、主持、都有专业的策划团队），针对不同的行业提供定制的专业服务，虽然每场活动都得到客户的一致好评，但是我们时时刻刻都在更新自己，让我们的设计理念和执行效果更多一份惊喜和特别司专注于做音乐文化交流、活动策划、派对活动。在音乐文化交流方面，组织优秀的专业音乐人才到专业或业余的音乐活动群体中做音乐文化交流。在活动策划中公司主要承接新品发布、企业年会、媒体发布会、庆典活动、会议活种赛事活动等服务感谢您选择我们！</p>
             <a href="">READ MORE +</a>
         </div>
-        <!--图片放大效果-->
+    </div>
+    <!--图片放大效果-->
+    <div class="container-fluid photo_show">
         <div class="row">
             <div class="col-md-3">
                 <div class="col-md-12">
-                    <img src="" alt="service图片">
+                    <div class="empty"></div>
+                    <img src="../public/image/service-01.jpg" alt="service图片" >
                 </div>
-                <div class="col-md-12"></div>
+                <div class="col-md-12">
+                    <div class="empty"></div>
+                    <img src="../public/image/service-02.jpg" alt="service图片"/>
+                </div>
             </div>
-            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <div class="empty left"></div>
+                <div class="empty right"></div>
+                <img src="../public/image/service-03.jpg" alt="service图片"/>
+            </div>
             <div class="col-md-3">
-                <div class="col-md-12"></div>
-                <div class="col-md-12"></div>
+                <div class="col-md-12">
+                    <div class="empty"></div>
+                    <img src="../public/image/service-04.jpg" alt="service图片" >
+                </div>
+                <div class="col-md-12">
+                    <div class="empty"></div>
+                    <img src="../public/image/service-05.jpg" alt="service图片"/>
+                </div>
             </div>
         </div>
     </div>
@@ -163,12 +179,55 @@
 <script src="../public/components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 var $tab_content=$(".service_tab_content"),
-        $tab=$(".tabs");
+        $tab=$(".tabs"),
+        $photo_container=$(".photo_show").find("div.col-md-12"),
+        $photo_container_big=$(".photo_show").find("div.col-md-6"),
+        $left=$(".left"),
+        $right=$(".right");
     $tab.hover(function () {
         var i=$(this).index();
         $(this).addClass("active").siblings().removeClass("active");
         $tab_content.eq(i).addClass("active").siblings().removeClass("active");
+    });
+    //图片放大效果
+toScale($photo_container_big,true);
+toScale($photo_container);
+
+function toScale(obj,bol) {
+    obj.hover(function () {
+        $(this).find("img").css({
+            webkitTransform:'scale(1)',
+            transform:'scale(1.2)'
+        });
+        if(bol){
+            $(this).find('div.left').animate({
+                left:'-50%'
+            });
+            $(this).find('div.right').animate({
+                left:'50%'
+            });
+        }else{
+               $(this).find("div.empty").slideDown(900);
+        }
+    },function () {
+        $(this).find("img").css({
+            webkitTransform:'scale(1)',
+            transform:'scale(1)'
+        });
+        if(bol){
+            $(this).find('div.left').animate({
+                left:'-100%'
+            });
+            $(this).find('div.right').animate({
+                left:'100%'
+            });
+        }else{
+            $(this).find("div.empty").hide(900);
+        }
     })
+}
+
+
 
 </script>
 </html>
