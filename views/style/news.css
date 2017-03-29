@@ -32,7 +32,7 @@ article{
 }
 .right-list:hover {
     background-color:#ffa304 ;
-    transition: 1s;
+    transition: 600ms;
 .right-list a p h4"color: white;"
 }
 .item-time{
@@ -98,12 +98,13 @@ article{
     background-color: #e2e2e2;
 }
 section{
+    padding-top: 90px;
+    margin: 0 auto;
     width: 1200px;
-    height: 100%;
 }
 .foot-top{
     width: 100%;
-    height: 328px;
+    height: 215px;
 }
 .foot-top h5{
     margin: 0;
@@ -120,10 +121,38 @@ section{
     margin:0;
 }
 .foot-top li{
+
     float: left;
     padding-right: 30px;
     list-style: none;
     margin: 0;
+    text-align: center;
+}
+.foot .foot-top ul li .lsp{
+    font-size: 18px;
+    -webkit-transition: 600ms;
+    -moz-transition: 600ms;
+    -ms-transition: 600ms;
+    -o-transition: 600ms;
+    transition: 600ms;
+}
+.foot .foot-top ul li:hover .lsp {
+    color: #00a0e9;
+}
+.foot hr{
+    position: relative;
+    top: -45px;
+}
+.footer-des {
+    margin: 0 auto;
+    width: 1200px;
+    font-size: 12px;
+    color: #616161;
+}
+.footer-des p{
+    margin-top: 20px;
+    margin-right: 14px;
+    display: inline-block;
 }
 @media all and (max-width: 1200px) {
     article{
@@ -134,6 +163,9 @@ section{
     }
     .art{
         width: 70%;
+    }
+    section{
+        width: 690px;
     }
 }
 
