@@ -14,7 +14,66 @@ img{
     width: 100%;
     height:100%;
 }
+header{
+    position: relative;
+}
+#nav-bar{
+    position: relative;
+    cursor: pointer;
+    width: 80px;
+    height: 70px;
+    font-weight: 800;
+    line-height: 70px;
+    color: #fff;
+    display: none;
+    padding-top: 16px;
+    background: #00a0e9;
+    -webkit-transition: 900ms;
+    -moz-transition: 900ms;
+    -o-transition: 900ms;
+    transition: 900ms;
+}
+.spinner{
+
+    position: absolute;
+    left: 50%;
+    width: 40px;
+    margin-left: -20px;
+    border: 2px solid #fff;
+    top:50%;
+}
+.spinner:first-child,.spinner:last-of-type{
+    -webkit-transition: 900ms;
+    -moz-transition: 900ms;
+    -o-transition: 900ms;
+    transition: 900ms;
+    top: 35%;
+}
+.spinner:last-of-type{
+    top: 65%;
+}
+
+#hide_nav{
+    display: none;
+    z-index: 22;
+    overflow: auto;
+    position: absolute;
+    width:100%;
+    left:0;
+    top:90px;
+    background: #f1f1f1;
+}
+#hide_nav ul li{
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 6em;
+}
+#hide_nav ul li a{
+    font-size: 4em;
+    color: #0f0f0f;
+}
 #logo{
+    margin-top:10px;
     width:187px;
     height: 76px;
 }
@@ -44,6 +103,7 @@ nav ul li a:hover{
 
 .news_container{
     margin-top: 35px;
+    padding-bottom: 35px;
 
 }
 .news_title,.service_title{
@@ -153,6 +213,7 @@ nav ul li a:hover{
 .service_tab_content{
     height: 270px;
     display: none;
+    padding-bottom: 20px;
     margin-top: 50px;
 }
 .service_tab_content.active{
@@ -207,7 +268,6 @@ nav ul li a:hover{
  }
  .about{
      width: 527px;
-     height:310px;
      position: absolute;
      left: 50%;
      top:50%;
@@ -241,4 +301,55 @@ nav ul li a:hover{
     text-decoration: none;
     color: #fff;
     background: #ffbe4f;
+}
+@media all and (max-width: 1200px) {
+    nav,.col-md-5{
+        display: none;
+    }
+    #nav-bar{
+
+        display: block;
+    }
+    #logo{
+        width: 145px;
+        height:60px;
+    }
+    #number{
+        width:226px;
+        height: 70px;
+    }
+    .service_tab_content{
+        height: auto;
+    }
+    .col-md-7{
+        float: none;
+        margin: 0 auto;
+    }
+}
+@media all and (max-width: 960px){
+    .introduce{
+        padding: 0;
+    }
+    .news_row .col-md-7 .row{
+        margin: 0;
+    }
+}
+@media all and (max-width: 770px){
+    .news_row .col-md-7 .col-md-2,#number{
+        display: none;
+    }
+    .wrap{
+        width:100%;
+    }
+    .about {
+        width: 97%;
+    }
+    .about img{
+        height: auto;
+    }
+    .read_more{
+        left:50%;
+        bottom:15px;
+        margin-left: -60px;
+    }
 }

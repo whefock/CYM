@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>蓝色视点</title>
     <link rel="stylesheet" href="../public/components/bootstrap/dist/css/bootstrap.min.css">
@@ -24,7 +24,22 @@
                 <li><a href="javascript:void(0)">我们</a></li>
             </ul>
         </nav>
+        <div id="nav-bar" class="nav-bar pull-right text-center">
+            <span class="spinner spinner1"></span>
+            <span class="spinner spinner2"></span>
+            <span class="spinner spinner3"></span>
+        </div>
         <div id="number" class="pull-right"><img src="../public/image/number.png" alt="联系方式图片"></div>
+    </div>
+    <div id="hide_nav">
+        <ul>
+            <li><a href="javascript:void(0)">首页</a></li>
+            <li><a href="javascript:void(0)">赛事</a></li>
+            <li><a href="javascript:void(0)">新闻</a></li>
+            <li><a href="javascript:void(0)">案例</a></li>
+            <li><a href="javascript:void(0)">服务</a></li>
+            <li><a href="javascript:void(0)">我们</a></li>
+        </ul>
     </div>
 </header>
 <!--banner开始-->
@@ -62,33 +77,33 @@
         </div>
         <div class="col-md-7">
             <div class="row">
-                <div class="col-md-2 text-center">
+                <div class="col-md-2 col-sm-2 text-center">
                     <h1>16</h1>
                     <span class="date">2017-02</span>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-10 col-sm-10">
                     <h4>2017年华表国际青少年钢琴公开赛</h4>
                     <p>2017年华表国际青少年钢琴公开赛&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;华表国际艺术文化交流协会：由国</p>
                     <a href="#">MORE+</a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2 text-center">
+                <div class="col-md-2 col-sm-2 text-center">
                     <h1>09</h1>
                     <span class="date">2017-02</span>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-10 col-sm-10">
                     <h4>2016年10月6日——25日英国著名钢琴家本杰明.弗里斯（Benjamin Frith)四川、西...</h4>
                     <p>活动主讲嘉宾介绍：Benjamin Frith 本杰明•弗里斯（Benjamin Frith）是英国钢琴家，世界</p>
                     <a href="#">MORE+</a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2 text-center">
+                <div class="col-md-2 col-sm-2 text-center">
                     <h1>09</h1>
                     <span class="date">2017-02</span>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-10 col-sm-10">
                     <h4>中央音乐学院钢琴家携手旅英钢琴家演绎 ——”浪漫主义大师李斯特、肖邦钢琴...</h4>
                     <p style="text-indent: 3em">主办单位：北京蓝色视点文化传播有限公司 协办单位：广州珠江钢琴集团股份有限公司 活动用琴：珠江恺</p>
                     <a href="#">MORE+</a>
@@ -146,27 +161,27 @@
     <!--图片放大效果-->
     <div class="container-fluid photo_show">
         <div class="row">
-            <div class="col-md-3">
-                <div class="col-md-12">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-6 col-xs-6">
                     <div class="empty"></div>
                     <img src="../public/image/service-01.jpg" alt="service图片" >
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-6 col-xs-6">
                     <div class="empty"></div>
                     <img src="../public/image/service-02.jpg" alt="service图片"/>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-12 col-xs-12 ">
                 <div class="empty left"></div>
                 <div class="empty right"></div>
                 <img src="../public/image/service-03.jpg" alt="service图片"/>
             </div>
-            <div class="col-md-3">
-                <div class="col-md-12">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-6 col-xs-6">
                     <div class="empty"></div>
                     <img src="../public/image/service-04.jpg" alt="service图片" >
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-6 col-xs-6">
                     <div class="empty"></div>
                     <img src="../public/image/service-05.jpg" alt="service图片"/>
                 </div>
@@ -193,13 +208,19 @@
 <script src="../public/components/jquery/dist/jquery.min.js"></script>
 <script src="../public/components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+    $(function () {
+
+
 var $tab_content=$(".service_tab_content"),
         $tab=$(".tabs"),
+        $nav=$("#nav-bar"),
+        $hide_nav=$("#hide_nav"),
         $photo_container=$(".photo_show").find("div.col-md-12"),
         $photo_container_big=$(".photo_show").find("div.col-md-6"),
         $about=$(".about"),
-        $left=$(".left"),
-        $right=$(".right");
+        $spinner1=$(".spinner1"),
+        $spinner2=$(".spinner2"),
+        $spinner3=$(".spinner3");
     $tab.hover(function () {
         var i=$(this).index();
         $(this).addClass("active").siblings().removeClass("active");
@@ -242,8 +263,51 @@ function toScale(obj,bol) {
         }
     })
 }
+        //        引用toggle方法
+        $.fn.toggle = function( fn, fn2 ) {
+            var args = arguments,guid = fn.guid || $.guid++,i=0,
+                    toggle = function( event ) {
+                        var lastToggle = ( $._data( this, "lastToggle" + fn.guid ) || 0 ) % i;
+                        $._data( this, "lastToggle" + fn.guid, lastToggle + 1 );
+                        event.preventDefault();
+                        return args[ lastToggle ].apply( this, arguments ) || false;
+                    };
+            toggle.guid = guid;
+            while ( i < args.length ) {
+                args[ i++ ].guid = guid;
+            }
+            return this.click( toggle );
+        };
+        //nav-bar点击变化
+        $nav.toggle(function () {
+            $spinner1.css({
+                transform:'rotate(45deg) translateX(5px) translateY(6px)'
+            },700);
+            $spinner2.hide(700);
+            $spinner3.css({
+                transform:'rotate(-45deg) translateX(8px) translateY(-11px)'
+            },700);
+           $(this).css({
+                background:"#ffa304",
+            })
+            $hide_nav.slideDown();
+        },function () {
+            $spinner1.css({
+                transform:'rotate(0deg)'
+            },700);
+            $spinner2.show(700);
+            $spinner3.css({
+                transform:'rotate(-0deg)'
+            },700);
+            $(this).children("span").removeClass("move");
+            $(this).css({
+                background:"#00a0e9",
+            })
+            $hide_nav.slideUp();
+        });
 
 
+    })
 
 </script>
 </html>
