@@ -1,32 +1,14 @@
-body{margin: 0}
-.title{
-    width:100%;
-    height: 90px;
-    background-color: white;
-    margin: 0;
-    border-top: 1px solid rgba(0,0,0,0);
+@import "header-footer.css";
+body{margin: 0;box-sizing: border-box;
+font-size: 62.5%}
 
-}
-.logo{
-    float: left;
-    width: 187px;
-    height: 90px;
-    margin:0;
-    padding:0;
-    position:absolute;
-    left:150px
-}
-#logo{
+li{list-style: none}
+a{text-decoration: none}
+img{
     width:100%;
-}
-.tel{float:right;
-    width: 290px;
-    height:60px;
-    position: relative;
-    right: 200px;
-}
-#tel{width: 100%;
-}
+    height:100%;
+    }
+
 .menu{width: 690px;
     height:90px;
     position: relative;
@@ -53,7 +35,7 @@ font-size: 90%}
     overflow: hidden;
 }
 .image img{width: 100%;
-display: block}
+    height:auto;}
 .crumbs-nav {
     width: 100%;
     height: 41px;
@@ -103,29 +85,23 @@ display: block}
     margin:10px;
 
 }
-.footer{
-    margin-top: 60px;
-    width: 100%;
-    height: 400px;
-    background-color: #e2e2e2;
-
-
-}
-.footer1 h3{
-    font-size: 14px;
-    font-weight: 400;
-
-
-}
-.footer1 {padding:90px 100px;
-}
-.footer li{list-style: none;
+.pull-left{
     float: left;
-    padding-right: 30px;
-    font-size:12px;
+
 
 
 }
+.pull-right{
+    float: right;
+
+
+
+}
+.text-center{
+    text-align: center;
+
+}
+
 
 
 
