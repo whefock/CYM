@@ -76,3 +76,29 @@ nav ul li a:hover{
     color: #00a0e9;
     text-decoration: none;
 }
+
+@media all and (max-width: 1200px) {
+    nav{
+        display: none;
+    }
+    #nav-bar{
+
+        display: block;
+    }
+    #logo{
+        width: 145px;
+        height:60px;
+    }
+    #number{
+        width:226px;
+        height: 70px;
+    }
+
+}
+
+@media all and (max-width: 770px){
+    #number{
+        display: none;
+    }
+
+}
