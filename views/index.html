@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>蓝色视点</title>
     <link rel="stylesheet" href="../public/components/bootstrap/dist/css/bootstrap.min.css">
@@ -207,7 +207,7 @@
     <!--公司介绍结束-->
 </div>
 <!--底部-->
-<div id="footer" style="display: none">
+<div id="footer" >
     <div class="foot">
         <p class="company">北京蓝色视点文化传播有限公司</p>
         <p class="dz"><span>手机：15901500298</span><span>座机：010-53602697</span><span>邮箱：helen0298@163.com</span>
@@ -255,7 +255,9 @@
     </div>
     <p class="contact"> <img src="../public/image/call-me.png" /></p>
     <div class="message">
-        <div id="toTop">返回顶部</div>
+        <div id="toTop">
+            <img src="../public/image/to-top.png" />
+        </div>
         <h4>北京蓝色视点文化传播有限公司</h4>
         <p>CopyRight ? 2016  All Rights Reserved.</p>
         <p>技术支持：HELPEUP</p>
@@ -265,58 +267,6 @@
 </body>
 <script src="../public/components/jquery/dist/jquery.min.js"></script>
 <script src="../public/components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
 <script src="js/nav.js"></script>
-<script type="text/javascript">
-    $(function () {
-        var $tab_content=$(".service_tab_content"),
-        $tab=$(".tabs"),
-        $photo_container=$(".photo_show").find("div.col-md-12"),
-        $photo_container_big=$(".photo_show").find("div.col-md-6"),
-        $about=$(".about");
-        $tab.hover(function () {
-        var i=$(this).index();
-        $(this).addClass("active").siblings().removeClass("active");
-        $tab_content.eq(i).addClass("active").siblings().removeClass("active");
-    });
-    //图片放大效果
-        toScale($photo_container_big,true);
-        toScale($photo_container);
-        toScale($about);
-        function toScale(obj,bol) {
-            obj.hover(function () {
-                $(this).find("img").css({
-                    webkitTransform:'scale(1)',
-                    transform:'scale(1.2)'
-                });
-                if(bol){
-                    $(this).find('div.left').animate({
-                        left:'-50%'
-                    });
-                    $(this).find('div.right').animate({
-                        left:'50%'
-                    });
-                }else{
-                       $(this).find("div.empty").slideDown(900);
-                }
-            },function () {
-                $(this).find("img").css({
-                    webkitTransform:'scale(1)',
-                    transform:'scale(1)'
-                });
-                if(bol){
-                    $(this).find('div.left').animate({
-                        left:'-100%'
-                    });
-                    $(this).find('div.right').animate({
-                        left:'100%'
-                    });
-                }else{
-                    $(this).find("div.empty").hide(900);
-                }
-            })
-        }
-
-})
-
-</script>
 </html>

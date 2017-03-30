@@ -1,0 +1,203 @@
+#header{
+    position: relative;
+}
+#nav-bar{
+    position: relative;
+    cursor: pointer;
+    width: 80px;
+    height: 70px;
+    font-weight: 800;
+    line-height: 70px;
+    color: #fff;
+    display: none;
+    padding-top: 16px;
+    background: #00a0e9;
+    -webkit-transition: 900ms;
+    -moz-transition: 900ms;
+    -o-transition: 900ms;
+    transition: 900ms;
+}
+.spinner{
+    position: absolute;
+    left: 50%;
+    width: 40px;
+    margin-left: -20px;
+    border: 2px solid #fff;
+    top:50%;
+}
+.spinner:first-child,.spinner:last-of-type{
+    -webkit-transition: 900ms;
+    -moz-transition: 900ms;
+    -o-transition: 900ms;
+    transition: 900ms;
+    top: 35%;
+}
+.spinner:last-of-type{
+    top: 65%;
+}
+
+#hide_nav{
+    display: none;
+    z-index: 22;
+    overflow: auto;
+    position: absolute;
+    width:100%;
+    left:0;
+    top:70px;
+    background: #f1f1f1;
+}
+#hide_nav ul li{
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 6em;
+}
+#hide_nav ul li a{
+    font-size: 4em;
+    color: #0f0f0f;
+}
+#logo{
+    margin-top:10px;
+    width:187px;
+    height: 76px;
+}
+#number{
+    width: 290px;
+    height:90px;
+}
+nav ul li{
+    float: left;
+    line-height: 90px;
+    padding: 0 2.7em;
+}
+nav ul li a{
+    color: #1f1f1f;
+}
+nav ul li a:hover{
+    color: #00a0e9;
+    text-decoration: none;
+}
+#footer{
+    background: #e2e2e2;
+}
+.foot{
+    padding: 5em 6.5em;
+    /*margin-left: 80px;*/
+}
+.dz span{
+    padding-right:  1em;
+}
+.company{
+    font-size: 2.1em;
+    color: #000;
+}
+.contact{
+    padding: 20px;
+}
+.contact img{
+    width: auto;
+    height:auto;
+}
+.weiXin,.weiBo{
+    margin-left: 50px;
+    color: #616161;
+    display: inline-block;
+    width:132px;
+}
+.fa-circle{
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+.weiXin:hover,.weiBo:hover{
+    color: #616161;
+    text-decoration: none;
+}
+.weiXin:hover .fa-circle,.weiBo:hover .fa-circle{
+    color: #00a0e9;
+}
+.bottom{
+    padding: 15px 0 40px 60px;
+    border-top: 1px solid #cbcbcb;
+}
+
+#foot_mobile{
+    display: none;
+    padding-top:  50px ;
+    text-align: center;
+}
+#foot_mobile p{
+    font-size: 2.4em;
+    padding-top: 20px;
+}
+#foot_mobile h4{
+    padding-top: 60px;
+    position: relative;
+}
+#foot_mobile h4::after{
+    position: absolute;
+    left: 48%;bottom: -20px;
+    content: "____";
+}
+#foot_mobile .contact{
+    width:320px;
+    height:42px;
+}
+.message{
+    position: relative;
+    margin-top: 70px;
+    color: #fff;
+    background: #00a0e9;
+    padding-bottom: 20px;
+}
+#toTop{
+    z-index: 22;
+    cursor: pointer;
+    margin-left: -45px;
+    position: absolute;
+    left:50%;
+    top:0;
+    margin-top: -25px;
+    width:90px;
+    height:50px;
+}
+@media all and (max-width: 1200px) {
+    nav{
+        display: none;
+    }
+    #nav-bar{
+
+        display: block;
+    }
+    #logo{
+        width: 145px;
+        height:60px;
+    }
+    #number{
+        width:226px;
+        height: 70px;
+    }
+}
+
+@media all and (max-width: 770px){
+    #number,#footer{
+        display: none;
+    }
+    #foot_mobile{
+        display: block;
+    }
+    .wrap{
+        width:90%!important;
+    }
+    .about{
+        width: 90%!important;
+    }
+    .about img{
+        height: auto;
+    }
+    .read_more{
+        left:50%;
+        bottom:15px;
+        margin-left: -60px;
+    }
+}
