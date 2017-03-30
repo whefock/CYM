@@ -9,38 +9,79 @@ article{
     width: 1200px;
     height: auto;
     margin: 0 auto;
-
 }
 .item{
+    position: relative;
     width: 100%;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    border: 1px solid white;
 }
+.hadden{
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    background-color: #c6c6c6;
+    display: none;
+    justify-content: space-around;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}
+.hadden i,h3{
+    color: white;
+}
+.item-left{
 
-
+}
 .item img{
     width: 140px;
     height: 140px;
 }
+.img-div{
+    float: left;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    z-index: -10;
+    background-color: #3e8f3e;
+}
+.itemt-time{
+  float: right;
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    margin-left: 10px;
+    background-color: #f1f1f1;
+}
 .right-list{
-    width: 87%;
+    width: 75.78%;
     float: right;
     height: 140px;
     display: inline-block;
     background-color:#f1f1f1;
-    margin-left: 10px;
     text-align: center;
 }
-.right-list:hover {
+.item:hover .itemt-time,.item:hover .right-list {
     background-color:#ffa304 ;
     transition: 600ms;
-.right-list a p h4"color: white;"
+}
+.item:hover.item .right-list h4,.item:hover.item .right-list a,.item:hover.item .right-list p{
+    color: white;
 }
 .item-time{
+    display: inline-block;
     color: rgba(97, 97, 97, 0.5);
     border-right: 1px solid #d4d4d4;
     float: left;
     padding:10px;
     margin-top:15px;
+    text-align: center;
 }
 .item-time strong{
     font-size: 48px;
@@ -58,6 +99,7 @@ article{
     text-overflow: ellipsis;
 }
 .art h4{
+    margin-top: 15px;
     font-size: 16px;
     color: #1f1f1f;
     font-weight: 400;
@@ -66,8 +108,7 @@ article{
     white-space: nowrap;
 }
 .art p{
-
-    margin: 20px 0 0 0;
+    margin: 15px 0 15px 0;
     width: 100%;
     height: 30px;
     word-break: break-all;
@@ -85,7 +126,6 @@ article{
     margin-top: 40px;
     margin-left: 5px;
 }
-
 .first-page{
     padding: 5px 10px;
     background-color: #ffbb00;
@@ -121,7 +161,6 @@ section{
     margin:0;
 }
 .foot-top li{
-
     float: left;
     padding-right: 30px;
     list-style: none;
@@ -154,12 +193,66 @@ section{
     margin-right: 14px;
     display: inline-block;
 }
+.hidden1{
+    width: 100%;
+    display: none;
+}
+.connection{
+    margin: 0 auto;
+    width: 320px;
+}
+.footer-share{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    align-items: center;
+    text-align: center;
+}
+.footer-share li{
+    width: 100px;
+    margin: 30px 20px;
+    list-style: none;
+}
+.to-top{
+    position: relative;
+    width: 100%;
+    background-color: #00a0e9;
+    color: white;
+    margin-top: 60px;
+    padding-top: 5px;
+    padding-bottom: 45px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+.to-top h4{
+    position: relative;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 45px;
+    line-height: 4;
+}
+.to-top img{
+    position: absolute;
+    top: -32px;
+    left: 315px;
+}
+.to-top p{
+    margin-top: 10px;
+}
+.to-top hr{
+    background-color: white;
+    width: 40px;
+    height: 1px;
+    position: relative;
+    left: 48%;
+}
 @media all and (max-width: 1200px) {
     article{
         width: 690px;
     }
     .right-list{
-        width: 78%;
+        width:57.94%;
     }
     .art{
         width: 70%;
@@ -167,6 +260,92 @@ section{
     section{
         width: 690px;
     }
+}
+@media all and (max-width: 768px) {
+    article{
+        width: 320px;
+        margin-bottom: 40px;
+    }
+    .item{
+        transition: 0s;
+    }
+    .item:hover{
+        border: 1px solid #ffa304 ;
+    }
+    .item:hover .right-list{
+        background-color:#f1f1f1;
+    }
+    .item:hover.item .right-list h4,.item:hover.item .right-list a,.item:hover.item .right-list p{
+        color: #616161;
+    }
+    .item:hover .hadden{
+        background-color:#ffa304;
+    }
+    .item-left{
+        box-overflow:hidden;
+    }
+    .hadden{
+        width: 160px;
+        height: 160px;
+        display: flex;
+        transition: 600ms;
+    }
+    .item:hover .img-div{
+        z-index: 10;
+        opacity: 0.4;
+        transform:scale(80,80);
+    }
+    .img-div{
+        width: 2px;
+        height: 2px;
+        background-color:#ffa304 ;
+        position:absolute;
+        left: 79px;
+        top: 79px;
+        transition: 600ms;
+     }
+    .item img{
+        width: 160px;
+        height: 160px;
+    }
+    .right-list{
+        float: none;
+        width: 318px;
+        position: relative;
+        top: -5px;
+    }
+    .itemt-time{
+        margin-left: 0;
+        width: 160px;
+        height: 160px;
+
+    }
+    .art{
+        float: left;
+        padding-left: 0;
+        padding-top: 10px;
+        width: 318px;
+
+    }
+    section{
+        width: 320px;
+    }
+    footer{
+        display: none;
+    }
+.hidden1{
+    padding-top: 50px;
+    display: block;
+}
+.lsp{
+    font-size: 18px;
+    color: #c6c6c6;
+    transition: 800ms;
+}
+.footer-share li:hover .lsp{
+    color: #00a0e9;
+}
+
 }
 
 
