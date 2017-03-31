@@ -1,0 +1,122 @@
+@import "header-footer.css";
+body{margin: 0;box-sizing: border-box;
+    font-size: 62.5%}
+
+li{list-style: none}
+a{text-decoration: none}
+img{
+    width:100%;
+    height:100%;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.text-center{
+    text-align: center;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration:none;
+    list-style-type:none ;
+}
+
+
+.spinner-list{
+    display: flex;
+    color: black;
+    width: 600px;
+    height: 90px;
+}
+.spinner-list :hover{
+    color:cyan;
+}
+.to{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.to img{
+    width: 100%;
+}
+.mieeie-nav{
+    background-color: #c8c8c8;
+    width: 100%;
+    height: 30px;
+    border-bottom: 3px solid silver;
+}
+.mieeie{
+    height: 30px;
+    width: 1200px;
+    line-height: 30px;
+    margin: 0 auto;
+    font-size: 10px ;
+
+}
+.mieeie1{
+    color: black;
+}
+.mieeie2{
+    color: black;
+}
+.mieeie3{
+    color: deepskyblue;
+}
+.core{
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px ;
+
+}
+.core a{
+    width: 100px;
+    height: 30px;
+    float: left;
+    color: #ffffff;
+    background-color: #4cbcf0;
+    line-height: 30px;
+    margin: 5px;
+    text-align: center;
+}
+.core a:hover{
+    background-color: rgb(0, 160, 233);
+}
+.core a:nth-child(1){
+
+}
+.about{
+    display: block;
+    height: 400px;
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center
+}
+.about img{
+    margin-top: 30px;
+    width: 600px;
+    height: 350px;
+}
+.text{
+    width: 1200px;
+
+    font-size: 10px;
+    margin: 0 auto;
+    line-height: 30px;
+}
+.text p{
+    text-indent: 30px;
+    margin: 15px;
+}
+.o{
+    width: 1200px;
+
+    margin: 0 auto;
+}
